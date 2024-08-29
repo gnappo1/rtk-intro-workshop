@@ -1,19 +1,15 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import TodoNoteForm from "./TodoNoteForm";
 import TodoNotes from "./TodoNotes";
 import TodosContainer from "./TodosContainer";
 
 const TodoPage = () => {
-  const [note, setNote] = useState("");
-
-  const handleNewNote = (data) => setNote(data);
 
   return (
     <div>
-      <TodoNoteForm handleNewNote={handleNewNote} />
+      <TodoNoteForm />
       <br />
-      <TodoNotes note={note} />
+      <TodoNotes />
       <br />
       <hr />
       <TodosContainer />

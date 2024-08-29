@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import {save} from "./todoSlice"
 
-
-const TodoNoteForm = ({ handleNewNote }) => {
+const TodoNoteForm = () => {
     const [note, setNote] = useState("");
+    const dispatch = useDispatch()
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        handleNewNote(note);
+        dispatch(save(note))
         setNote("");
     };
 
