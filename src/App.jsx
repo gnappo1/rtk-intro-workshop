@@ -1,5 +1,5 @@
 import './App.css'
-import TodoPage from './components/todos/TodoPage'
+import TodoPage from './components/TodoPage'
 
 function App() {
 
